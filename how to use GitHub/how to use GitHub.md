@@ -12,37 +12,26 @@
  */
 <!-- TOC -->
 
-* [1. Unable to open GitHub in China](#1-unable-to-open-github-in-china)
-  * [1.1. Method 1: change DNS](#11-method-1-change-dns)
-    * [1.1.1. find DNS address](#111-find-dns-address)
-* [2. No `.ssh` folder under GitHub folder](#2-no-ssh-folder-under-github-folder)
-  * [2.1. Login GitHub in local](#21-login-github-in-local)
-* [3. Change the folder name in local](#3-change-the-folder-name-in-local)
-  * [3.1. Find local folder `.ssh`](#31-find-local-folder-ssh)
-  * [3.2. Copy the repository's SSH address](#32-copy-the-repositorys-ssh-address)
-  * [3.3. Change Directory Name](#33-change-directory-name)
+* [1. No `.ssh` folder under GitHub folder](#1-no-ssh-folder-under-github-folder)
+  * [1.1. Login GitHub in local](#11-login-github-in-local)
+* [2. Change the folder name in local](#2-change-the-folder-name-in-local)
+  * [2.1. Find local folder `.ssh`](#21-find-local-folder-ssh)
+  * [2.2. Copy the repository's SSH address](#22-copy-the-repositorys-ssh-address)
+  * [2.3. Change Directory Name](#23-change-directory-name)
+* [3. Unable to open GitHub in China](#3-unable-to-open-github-in-china)
+  * [3.1. Method 1: change DNS](#31-method-1-change-dns)
+    * [3.1.1. find DNS address](#311-find-dns-address)
+  * [3.2. Method 2](#32-method-2)
 
 <!-- /TOC -->
 
 <div style="page-break-after:always"></div>
 
-## 1. Unable to open GitHub in China
-
-### 1.1. Method 1: change DNS
-
->[github打不开？不改host也可以](https://blog.csdn.net/AE_yang/article/details/122995471?ops_request_misc=&request_id=&biz_id=102&utm_term=github%E6%89%93%E4%B8%8D%E5%BC%80&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-122995471.nonecase&spm=1018.2226.3001.4187)
-
-#### 1.1.1. find DNS address
-
-Find the DNS for GitHub from <http://tool.chinaz.com/dns/>, in A search `github.com` and get the fastest ip (ip with smallest TTL value)
-
-![dns search](./dns%20search.png)
-
-## 2. No `.ssh` folder under GitHub folder
+## 1. No `.ssh` folder under GitHub folder
 
 > [使用本地Windows创建密钥连接GitHub时发现你的git根目录里没有.ssh文件夹怎么办](https://blog.csdn.net/shame_Joker/article/details/109702083?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167792128616782427440049%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=167792128616782427440049&biz_id=0&utm_medium=distribute.pc_chrome_plugin_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-109702083-null-null.nonecase&utm_term=windows%20.ssh%E6%96%87%E4%BB%B6%E5%A4%B9%E5%9C%B0%E5%9D%80&spm=1018.2226.3001.4187)
 
-### 2.1. Login GitHub in local
+### 1.1. Login GitHub in local
 
 Right click on the desktop and click `Git Bash Here`.
 
@@ -79,9 +68,9 @@ The second line `Enter passphrase (empty for no passphrase)` is to set up the pa
 
 Now there is `.ssh` folder under your `user` folder, and you can setup ssh function in GitHub,
 
-## 3. Change the folder name in local
+## 2. Change the folder name in local
 
-### 3.1. Find local folder `.ssh`
+### 2.1. Find local folder `.ssh`
 
 Open the folder `C:\Users\computer_user\.ssh`, the `computer_user` is the current user of your computer.
 
@@ -99,7 +88,7 @@ Click `New SSH key`, give it a title name and paste the ssh key in the key box.
 
 ![ssh2](./ssh_set2.png)
 
-### 3.2. Copy the repository's SSH address
+### 2.2. Copy the repository's SSH address
 
 Go to the website of your repository that you would like to change.
 
@@ -113,7 +102,7 @@ git clone "git@github.com:hg-fine-codes/python-study-beginner.git"
 
 ![git clone](./git%20clone.png)
 
-### 3.3. Change Directory Name
+### 2.3. Change Directory Name
 
 (1) Go to your cloned folder address. Change the `old_name` folder name into `new_name`.
 
@@ -147,4 +136,70 @@ And push again will solve this problem.
 
 ```shell
 git push
+```
+
+## 3. Unable to open GitHub in China
+
+### 3.1. Method 1: change DNS
+
+>[github打不开？不改host也可以](https://blog.csdn.net/AE_yang/article/details/122995471?ops_request_misc=&request_id=&biz_id=102&utm_term=github%E6%89%93%E4%B8%8D%E5%BC%80&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-122995471.nonecase&spm=1018.2226.3001.4187)
+
+#### 3.1.1. find DNS address
+
+Find the DNS for GitHub from <http://tool.chinaz.com/dns/>, in A search `github.com` and get the fastest ip (ip with smallest TTL value)
+
+![dns search](./dns%20search.png)
+
+### 3.2. Method 2
+
+Update DNS information with the github project `521xueweihan/GitHub520`
+
+<https://github.com/521xueweihan/GitHub520>
+
+```script
+# GitHub520 Host Start
+140.82.114.25                 alive.github.com
+140.82.114.6                  api.github.com
+185.199.110.153               assets-cdn.github.com
+185.199.108.133               avatars.githubusercontent.com
+185.199.108.133               avatars0.githubusercontent.com
+185.199.108.133               avatars1.githubusercontent.com
+185.199.108.133               avatars2.githubusercontent.com
+185.199.108.133               avatars3.githubusercontent.com
+185.199.108.133               avatars4.githubusercontent.com
+185.199.108.133               avatars5.githubusercontent.com
+185.199.108.133               camo.githubusercontent.com
+140.82.114.21                 central.github.com
+185.199.108.133               cloud.githubusercontent.com
+140.82.112.10                 codeload.github.com
+140.82.112.21                 collector.github.com
+185.199.108.133               desktop.githubusercontent.com
+185.199.108.133               favicons.githubusercontent.com
+140.82.114.4                  gist.github.com
+52.216.143.36                 github-cloud.s3.amazonaws.com
+52.217.32.68                  github-com.s3.amazonaws.com
+52.216.210.105                github-production-release-asset-2e65be.s3.amazonaws.com
+54.231.171.9                  github-production-repository-file-5c1aeb.s3.amazonaws.com
+52.217.201.177                github-production-user-asset-6210df.s3.amazonaws.com
+192.0.66.2                    github.blog
+140.82.113.4                  github.com
+140.82.112.18                 github.community
+185.199.109.154               github.githubassets.com
+151.101.65.194                github.global.ssl.fastly.net
+185.199.110.153               github.io
+185.199.108.133               github.map.fastly.net
+185.199.110.153               githubstatus.com
+140.82.113.25                 live.github.com
+185.199.108.133               media.githubusercontent.com
+185.199.108.133               objects.githubusercontent.com
+13.107.43.16                  pipelines.actions.githubusercontent.com
+185.199.108.133               raw.githubusercontent.com
+185.199.108.133               user-images.githubusercontent.com
+13.107.238.51                 vscode.dev
+
+
+# Update time: 2023-03-04T22:04:56+08:00
+# Update url: https://raw.hellogithub.com/hosts
+# Star me: https://github.com/521xueweihan/GitHub520
+# GitHub520 Host End
 ```
