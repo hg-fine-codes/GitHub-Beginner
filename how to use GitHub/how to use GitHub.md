@@ -199,6 +199,18 @@ Update DNS information with the github project `521xueweihan/GitHub520`
 
 <https://github.com/521xueweihan/GitHub520>
 
+自动方式（SwitchHosts）
+Tip：推荐 SwitchHosts 工具管理 hosts
+
+以 [SwitchHosts](<https://github.com/oldj/SwitchHosts>) 为例，看一下怎么使用的，配置参考下面：
+
+- Title: GitHub520
+- Type: Remote
+- URL: <https://raw.hellogithub.com/hosts>
+- Auto Refresh: 1 hour
+
+这样每次 hosts 有更新都能及时进行更新，免去手动更新。
+
 ### 4.2. change DNS manually
 
 >[github打不开？不改host也可以](https://blog.csdn.net/AE_yang/article/details/122995471?ops_request_misc=&request_id=&biz_id=102&utm_term=github%E6%89%93%E4%B8%8D%E5%BC%80&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-122995471.nonecase&spm=1018.2226.3001.4187)
